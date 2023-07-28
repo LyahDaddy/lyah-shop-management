@@ -1,0 +1,26 @@
+{
+  "name": "lyah-shop",
+  "version": "0.0.1",
+  "description": "An online shop management app",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "serve": "nodemon ./src/index.ts",
+    "lint": "eslint --ext .ts --fix src/**/*.ts test/**/*.ts",
+    "build": "npm run clean && npm run lint && tsc"
+  },
+  "author": "Jeremy Jiang",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6"
+  }
+}
