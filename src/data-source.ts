@@ -5,6 +5,9 @@ import { Users } from './entity/Users';
 import { Orders } from './entity/Orders';
 import { Products } from './entity/Products';
 import { Categories } from './entity/Categories';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 export const AppDataSource = new DataSource({
   type: 'mysql',
@@ -12,7 +15,7 @@ export const AppDataSource = new DataSource({
   port: 3306,
   username: process.env.LYAH_DB_USERNAME,
   password: process.env.LYAH_DB_PASSWORD,
-  database: 'lyah_shop_dev',
+  database: process.env.LYAH_DB_DATABASE,
   synchronize: true,
   logging: ['error'],
   entities: [
