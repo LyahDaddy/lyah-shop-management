@@ -8,20 +8,32 @@ export class Users {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ length: 100 })
+  @Column({ length: 255 })
+  password: string;
+
+  @Column({ length: 255, unique: true })
+  username: string;
+
+  @Column({ length: 100, nullable: true })
   firstName: string;
   
-  @Column({ length: 100 })
+  @Column({ length: 100, nullable: true })
   lastName: string;
 
-  @Column({ length: 100 })
+  @Column({ length: 100, nullable: true})
   email: string;
 
-  @Column({ length: 200 })
+  @Column({ length: 200, nullable: true })
   address: string;
 
-  @Column({ length: 18 })
+  @Column({ length: 18, nullable: true })
   phone: string;
+
+  @Column({ type: 'date', nullable: true })
+  created: Date;
+
+  @Column({ type: 'date', nullable: true })
+  lastLogin: Date;
 
   @ManyToOne(() => Clients, (client) => client.users)
   client: Clients;
