@@ -26,7 +26,7 @@ app.use(session({
    */
 }));
 
-app.use('/', authRouter);
+app.use('/api/v0/auth', authRouter);
 
 app.get('/', (req, res) => {
   res.send('HOME PAGE');

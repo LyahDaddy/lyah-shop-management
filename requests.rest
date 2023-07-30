@@ -1,5 +1,5 @@
 ###
-POST http://localhost:3000/signup HTTP/1.1
+POST http://localhost:3000/api/v0/auth/signup HTTP/1.1
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3000/login/password HTTP/1.1
+POST http://localhost:3000/api/v0/auth/login/password HTTP/1.1
 Content-Type: application/json
 
 {
@@ -17,10 +17,13 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/login HTTP/1.1
+POST http://localhost:3000/api/v0/auth/login/password HTTP/1.1
 Content-Type: application/json
 
 {
-  "username": "user 2",
-  "password": "12345678"
+  "username": "user 10",
+  "password": "123457656"
 }
+
+###
+POST http://localhost:3000/api/v0/auth/logout HTTP/1.1
