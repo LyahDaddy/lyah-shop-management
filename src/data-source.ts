@@ -1,10 +1,10 @@
 import { DataSource } from 'typeorm';
-import { Clients } from './entity/Clients';
-import { Roles } from './entity/Roles';
-import { Users } from './entity/Users';
-import { Orders } from './entity/Orders';
-import { Products } from './entity/Products';
-import { Categories } from './entity/Categories';
+import { Clients } from './entities/Clients';
+import { Roles } from './entities/Roles';
+import { Users } from './entities/Users';
+import { Orders } from './entities/Orders';
+import { Products } from './entities/Products';
+import { Categories } from './entities/Categories';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
