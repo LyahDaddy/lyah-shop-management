@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 import authRouter from './routers/auth';
 import passport from 'passport';
 import session, { MemoryStore } from 'express-session';
+import cors from 'cors';
 
 AppDataSource.initialize().then(() => {
   console.log('db connection established');
@@ -25,6 +26,7 @@ app.use(session({
    * Modify it before deploy on Production Environment!!!
    */
 }));
+app.use(cors());
 
 app.use('/api/v0/auth', authRouter);
 
